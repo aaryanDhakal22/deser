@@ -4,7 +4,6 @@ import pyautogui
 from pyautogui import click
 from CORDS import *
 import pytesseract
-from flask import Flask
 from utils import location_prov
 
 
@@ -20,7 +19,7 @@ def startup():
     sleep(1)
 
 
-image = cv2.imread("original.png")
+image = cv2.imread("./original.png")
 
 raw_address = []
 
