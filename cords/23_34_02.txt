@@ -1,0 +1,4 @@
+Point(x=840, y=644)
+Point(x=840, y=644)
+Point(x=840, y=644)
+Point(x=840, y=644)
