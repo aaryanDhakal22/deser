@@ -4,8 +4,8 @@ import pyautogui
 from pyautogui import click
 from CORDS import *
 import numpy as np
-import winsound
 import keyboard
+import playsound
 
 while True:
     sleep(5)
@@ -68,13 +68,9 @@ while True:
     locations = np.where(result >= threshold)
 
     # Print "found" if a match is found
+    click(CORD_KEY)
     if len(locations[0]) > 0:
         print("Found")
-        while True:
-            winsound.Beep(1000, 1000)
-            sleep(0.5)  # Beep interval
-            if keyboard.is_pressed("space"):
-                break
-
-    sleep(60)
-    click(CORD_KEY)
+        for i in range(3):
+            playsound.playsound("bell.wav")
+    sleep(120)

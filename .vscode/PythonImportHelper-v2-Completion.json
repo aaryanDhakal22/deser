@@ -1,5 +1,23 @@
 [
     {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
         "label": "pyautogui",
         "kind": 6,
         "isExtraImport": true,
@@ -39,6 +57,24 @@
         "description": "time",
         "isExtraImport": true,
         "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "playsound",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "playsound",
+        "description": "playsound",
+        "detail": "playsound",
+        "documentation": {}
+    },
+    {
+        "label": "keyboard",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "keyboard",
+        "description": "keyboard",
+        "detail": "keyboard",
         "documentation": {}
     },
     {
@@ -85,12 +121,39 @@
         "documentation": {}
     },
     {
-        "label": "keyboard",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "keyboard",
-        "description": "keyboard",
-        "detail": "keyboard",
+        "label": "send_message",
+        "kind": 2,
+        "importPath": "aaryan",
+        "description": "aaryan",
+        "peekOfCode": "def send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    server.sendmail(auth[0], recipient, message)\nsend_message(\"4436537892\", \"tmobile\", \"Hello, chutiye\")",
+        "detail": "aaryan",
+        "documentation": {}
+    },
+    {
+        "label": "CARRIERS",
+        "kind": 5,
+        "importPath": "aaryan",
+        "description": "aaryan",
+        "peekOfCode": "CARRIERS = {\n    \"att\": \"@mms.att.net\",\n    \"tmobile\": \"@tmomail.net\",\n    \"verizon\": \"@vtext.com\",\n    \"sprint\": \"@messaging.sprintpcs.com\",\n}\nEMAIL = \"gigihad1891@gmail.com\"\nPASSWORD = \"gigihadid123!\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]",
+        "detail": "aaryan",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL",
+        "kind": 5,
+        "importPath": "aaryan",
+        "description": "aaryan",
+        "peekOfCode": "EMAIL = \"gigihad1891@gmail.com\"\nPASSWORD = \"gigihadid123!\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    server.sendmail(auth[0], recipient, message)",
+        "detail": "aaryan",
+        "documentation": {}
+    },
+    {
+        "label": "PASSWORD",
+        "kind": 5,
+        "importPath": "aaryan",
+        "description": "aaryan",
+        "peekOfCode": "PASSWORD = \"gigihadid123!\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    server.sendmail(auth[0], recipient, message)\nsend_message(\"4436537892\", \"tmobile\", \"Hello, chutiye\")",
+        "detail": "aaryan",
         "documentation": {}
     },
     {
@@ -98,7 +161,7 @@
         "kind": 2,
         "importPath": "beepy",
         "description": "beepy",
-        "peekOfCode": "def beep():\n    winsound.Beep(1000, 200)  # 1000 Hz frequency, 200 ms duration\nprint(\"Press SPACE to stop beeping...\")\nwhile True:\n    beep()\n    time.sleep(0.5)  # Beep interval\n    if ' ' in pyautogui.keyDown('space'):\n        print(\"Spacebar pressed, stopping beeps.\")\n        break",
+        "peekOfCode": "def beep():\n    playsound.playsound(\"bell.wav\")  # 1000 Hz frequency, 200 ms duration\nprint(\"Press SPACE to stop beeping...\")\nfor i in range(3):\n    beep()",
         "detail": "beepy",
         "documentation": {}
     },

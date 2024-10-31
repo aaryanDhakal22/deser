@@ -1,15 +1,14 @@
 import pyautogui
 import time
+import playsound
+import keyboard
 
-import winsound
+
 def beep():
-    winsound.Beep(1000, 200)  # 1000 Hz frequency, 200 ms duration
+    playsound.playsound("bell.wav")  # 1000 Hz frequency, 200 ms duration
+
 
 print("Press SPACE to stop beeping...")
 
-while True:
+for i in range(3):
     beep()
-    time.sleep(0.5)  # Beep interval
-    if ' ' in pyautogui.keyDown('space'):
-        print("Spacebar pressed, stopping beeps.")
-        break
