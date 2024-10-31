@@ -1,0 +1,150 @@
+[
+    {
+        "label": "pyautogui",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyautogui",
+        "description": "pyautogui",
+        "detail": "pyautogui",
+        "documentation": {}
+    },
+    {
+        "label": "click",
+        "importPath": "pyautogui",
+        "description": "pyautogui",
+        "isExtraImport": true,
+        "detail": "pyautogui",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "winsound",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "winsound",
+        "description": "winsound",
+        "detail": "winsound",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "isExtraImport": true,
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "keyboard",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "keyboard",
+        "description": "keyboard",
+        "detail": "keyboard",
+        "documentation": {}
+    },
+    {
+        "label": "beep",
+        "kind": 2,
+        "importPath": "beepy",
+        "description": "beepy",
+        "peekOfCode": "def beep():\n    winsound.Beep(1000, 200)  # 1000 Hz frequency, 200 ms duration\nprint(\"Press SPACE to stop beeping...\")\nwhile True:\n    beep()\n    time.sleep(0.5)  # Beep interval\n    if ' ' in pyautogui.keyDown('space'):\n        print(\"Spacebar pressed, stopping beeps.\")\n        break",
+        "detail": "beepy",
+        "documentation": {}
+    },
+    {
+        "label": "CORD_PASSKEY",
+        "kind": 5,
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "peekOfCode": "CORD_PASSKEY = [840, 644]\nCORD_ENTER = [928, 756]\nCORD_DISPATCH = [979, 291]\nCORD_KEY = [487, 967]",
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "CORD_ENTER",
+        "kind": 5,
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "peekOfCode": "CORD_ENTER = [928, 756]\nCORD_DISPATCH = [979, 291]\nCORD_KEY = [487, 967]",
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "CORD_DISPATCH",
+        "kind": 5,
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "peekOfCode": "CORD_DISPATCH = [979, 291]\nCORD_KEY = [487, 967]",
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "CORD_KEY",
+        "kind": 5,
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "peekOfCode": "CORD_KEY = [487, 967]",
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "new_file",
+        "kind": 5,
+        "importPath": "detect",
+        "description": "detect",
+        "peekOfCode": "new_file = open(f\"./cords/{datetime.now().strftime('%H_%M_%S')}.txt\", \"w\")\nsleep(4)\nfor i in range(4):\n    winsound.Beep(500, 1000)\n    winsound.Beep(600, 1000)\n    winsound.Beep(700, 1000)\n    new_file.write(str(pyautogui.position()))\n    new_file.write(\"\\n\")",
+        "detail": "detect",
+        "documentation": {}
+    }
+]

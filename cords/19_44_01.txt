@@ -1,0 +1,4 @@
+Point(x=1283, y=886)
+Point(x=1283, y=902)
+Point(x=1283, y=902)
+Point(x=1283, y=902)
