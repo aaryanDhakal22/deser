@@ -1,20 +1,19 @@
 [
     {
-        "label": "smtplib",
+        "label": "winsound",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "smtplib",
-        "description": "smtplib",
-        "detail": "smtplib",
+        "importPath": "winsound",
+        "description": "winsound",
+        "detail": "winsound",
         "documentation": {}
     },
     {
-        "label": "sys",
-        "kind": 6,
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
         "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -35,15 +34,6 @@
         "documentation": {}
     },
     {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
-        "documentation": {}
-    },
-    {
         "label": "sleep",
         "importPath": "time",
         "description": "time",
@@ -57,49 +47,6 @@
         "description": "time",
         "isExtraImport": true,
         "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "playsound",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "playsound",
-        "description": "playsound",
-        "detail": "playsound",
-        "documentation": {}
-    },
-    {
-        "label": "keyboard",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "keyboard",
-        "description": "keyboard",
-        "detail": "keyboard",
-        "documentation": {}
-    },
-    {
-        "label": "winsound",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "winsound",
-        "description": "winsound",
-        "detail": "winsound",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -129,57 +76,21 @@
         "documentation": {}
     },
     {
+        "label": "playsound",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "playsound",
+        "description": "playsound",
+        "detail": "playsound",
+        "documentation": {}
+    },
+    {
         "label": "pytesseract",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "pytesseract",
         "description": "pytesseract",
         "detail": "pytesseract",
-        "documentation": {}
-    },
-    {
-        "label": "send_message",
-        "kind": 2,
-        "importPath": "aaryan",
-        "description": "aaryan",
-        "peekOfCode": "def send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    print(auth[0], recipient, message)\n    server.sendmail(auth[0], recipient, message)\n    server.quit()",
-        "detail": "aaryan",
-        "documentation": {}
-    },
-    {
-        "label": "CARRIERS",
-        "kind": 5,
-        "importPath": "aaryan",
-        "description": "aaryan",
-        "peekOfCode": "CARRIERS = {\n    \"att\": \"@mms.att.net\",\n    \"tmobile\": \"@tmomail.net\",\n    \"verizon\": \"@vtext.com\",\n    \"sprint\": \"@messaging.sprintpcs.com\",\n}\nEMAIL = \"williamsbottified@gmail.com\"\nPASSWORD = \"feux lmsw xcsq bggm\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]",
-        "detail": "aaryan",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL",
-        "kind": 5,
-        "importPath": "aaryan",
-        "description": "aaryan",
-        "peekOfCode": "EMAIL = \"williamsbottified@gmail.com\"\nPASSWORD = \"feux lmsw xcsq bggm\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    print(auth[0], recipient, message)",
-        "detail": "aaryan",
-        "documentation": {}
-    },
-    {
-        "label": "PASSWORD",
-        "kind": 5,
-        "importPath": "aaryan",
-        "description": "aaryan",
-        "peekOfCode": "PASSWORD = \"feux lmsw xcsq bggm\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    print(auth[0], recipient, message)\n    server.sendmail(auth[0], recipient, message)",
-        "detail": "aaryan",
-        "documentation": {}
-    },
-    {
-        "label": "beep",
-        "kind": 2,
-        "importPath": "beepy",
-        "description": "beepy",
-        "peekOfCode": "def beep():\n    playsound.playsound(\"bell.wav\")  # 1000 Hz frequency, 200 ms duration\nprint(\"Press SPACE to stop beeping...\")\nfor i in range(3):\n    beep()",
-        "detail": "beepy",
         "documentation": {}
     },
     {
@@ -232,35 +143,8 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def is_being_used():\n    pyautogui.screenshot(\"check.jpg\")\n    check_img = cv2.imread(\"check.jpg\")\n    aoi = check_img[294:305, 548:595]\n    # ref_img = cv2.imread(\"aoi.jpg\")\n    gray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\n    # Use pytesseract to detect text\n    text = pytesseract.image_to_string(gray)\n    print(text)\n    if text.strip():",
+        "peekOfCode": "def is_being_used():\n    pyautogui.screenshot(\"check.jpg\")\n    check_img = cv2.imread(\"check.jpg\")\n    aoi = check_img[294:305, 548:595]\n    gray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\n    text = pytesseract.image_to_string(gray)\n    print(text)\n    if text.strip():\n        return True\n    else:",
         "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "check_img",
-        "kind": 5,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "check_img = cv2.imread(\"check.jpg\")\naoi = check_img[294:305, 548:595]\n# ref_img = cv2.imread(\"aoi.jpg\")\ngray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\ncv2.imwrite(\"aoi.jpg\", gray)",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "aoi",
-        "kind": 5,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "aoi = check_img[294:305, 548:595]\n# ref_img = cv2.imread(\"aoi.jpg\")\ngray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\ncv2.imwrite(\"aoi.jpg\", gray)",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "gray",
-        "kind": 5,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "gray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\ncv2.imwrite(\"aoi.jpg\", gray)",
-        "detail": "test",
         "documentation": {}
     }
 ]
