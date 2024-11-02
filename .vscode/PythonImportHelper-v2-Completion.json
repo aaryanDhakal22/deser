@@ -60,6 +60,14 @@
         "documentation": {}
     },
     {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "playsound",
         "kind": 6,
         "isExtraImport": true,
@@ -121,11 +129,20 @@
         "documentation": {}
     },
     {
+        "label": "pytesseract",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytesseract",
+        "description": "pytesseract",
+        "detail": "pytesseract",
+        "documentation": {}
+    },
+    {
         "label": "send_message",
         "kind": 2,
         "importPath": "aaryan",
         "description": "aaryan",
-        "peekOfCode": "def send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    server.sendmail(auth[0], recipient, message)\nsend_message(\"4436537892\", \"tmobile\", \"Hello, chutiye\")",
+        "peekOfCode": "def send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    print(auth[0], recipient, message)\n    server.sendmail(auth[0], recipient, message)\n    server.quit()",
         "detail": "aaryan",
         "documentation": {}
     },
@@ -134,7 +151,7 @@
         "kind": 5,
         "importPath": "aaryan",
         "description": "aaryan",
-        "peekOfCode": "CARRIERS = {\n    \"att\": \"@mms.att.net\",\n    \"tmobile\": \"@tmomail.net\",\n    \"verizon\": \"@vtext.com\",\n    \"sprint\": \"@messaging.sprintpcs.com\",\n}\nEMAIL = \"gigihad1891@gmail.com\"\nPASSWORD = \"gigihadid123!\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]",
+        "peekOfCode": "CARRIERS = {\n    \"att\": \"@mms.att.net\",\n    \"tmobile\": \"@tmomail.net\",\n    \"verizon\": \"@vtext.com\",\n    \"sprint\": \"@messaging.sprintpcs.com\",\n}\nEMAIL = \"williamsbottified@gmail.com\"\nPASSWORD = \"feux lmsw xcsq bggm\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]",
         "detail": "aaryan",
         "documentation": {}
     },
@@ -143,7 +160,7 @@
         "kind": 5,
         "importPath": "aaryan",
         "description": "aaryan",
-        "peekOfCode": "EMAIL = \"gigihad1891@gmail.com\"\nPASSWORD = \"gigihadid123!\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    server.sendmail(auth[0], recipient, message)",
+        "peekOfCode": "EMAIL = \"williamsbottified@gmail.com\"\nPASSWORD = \"feux lmsw xcsq bggm\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    print(auth[0], recipient, message)",
         "detail": "aaryan",
         "documentation": {}
     },
@@ -152,7 +169,7 @@
         "kind": 5,
         "importPath": "aaryan",
         "description": "aaryan",
-        "peekOfCode": "PASSWORD = \"gigihadid123!\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    server.sendmail(auth[0], recipient, message)\nsend_message(\"4436537892\", \"tmobile\", \"Hello, chutiye\")",
+        "peekOfCode": "PASSWORD = \"feux lmsw xcsq bggm\"\ndef send_message(phone_number, carrier, message):\n    recipient = phone_number + CARRIERS[carrier]\n    auth = (EMAIL, PASSWORD)\n    server = smtplib.SMTP(\"smtp.gmail.com\", 587)\n    server.set_debuglevel(debuglevel=0)\n    server.starttls()\n    server.login(auth[0], auth[1])\n    print(auth[0], recipient, message)\n    server.sendmail(auth[0], recipient, message)",
         "detail": "aaryan",
         "documentation": {}
     },
@@ -208,6 +225,42 @@
         "description": "detect",
         "peekOfCode": "new_file = open(f\"./cords/{datetime.now().strftime('%H_%M_%S')}.txt\", \"w\")\nsleep(4)\nfor i in range(4):\n    winsound.Beep(500, 1000)\n    winsound.Beep(600, 1000)\n    winsound.Beep(700, 1000)\n    new_file.write(str(pyautogui.position()))\n    new_file.write(\"\\n\")",
         "detail": "detect",
+        "documentation": {}
+    },
+    {
+        "label": "is_being_used",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def is_being_used():\n    pyautogui.screenshot(\"check.jpg\")\n    check_img = cv2.imread(\"check.jpg\")\n    aoi = check_img[294:305, 548:595]\n    # ref_img = cv2.imread(\"aoi.jpg\")\n    gray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\n    # Use pytesseract to detect text\n    text = pytesseract.image_to_string(gray)\n    print(text)\n    if text.strip():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "check_img",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "check_img = cv2.imread(\"check.jpg\")\naoi = check_img[294:305, 548:595]\n# ref_img = cv2.imread(\"aoi.jpg\")\ngray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\ncv2.imwrite(\"aoi.jpg\", gray)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "aoi",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "aoi = check_img[294:305, 548:595]\n# ref_img = cv2.imread(\"aoi.jpg\")\ngray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\ncv2.imwrite(\"aoi.jpg\", gray)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "gray",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "gray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\ncv2.imwrite(\"aoi.jpg\", gray)",
+        "detail": "test",
         "documentation": {}
     }
 ]

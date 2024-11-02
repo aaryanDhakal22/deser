@@ -8,8 +8,8 @@ CARRIERS = {
     "sprint": "@messaging.sprintpcs.com",
 }
 
-EMAIL = "gigihad1891@gmail.com"
-PASSWORD = "gigihadid123!"
+EMAIL = "williamsbottified@gmail.com"
+PASSWORD = "feux lmsw xcsq bggm"
 
 
 def send_message(phone_number, carrier, message):
@@ -20,8 +20,9 @@ def send_message(phone_number, carrier, message):
     server.set_debuglevel(debuglevel=0)
     server.starttls()
     server.login(auth[0], auth[1])
-
+    print(auth[0], recipient, message)
     server.sendmail(auth[0], recipient, message)
+    server.quit()
 
 
-send_message("4436537892", "tmobile", "Hello, chutiye")
+send_message("4437568987", "tmobile", "Hello")

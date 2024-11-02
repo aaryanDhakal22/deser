@@ -4,11 +4,33 @@ import pyautogui
 from pyautogui import click
 from CORDS import *
 import numpy as np
-import keyboard
 import playsound
+import pytesseract
+
+
+def is_being_used():
+    pyautogui.screenshot("check.jpg")
+    check_img = cv2.imread("check.jpg")
+    aoi = check_img[294:305, 548:595]
+    # ref_img = cv2.imread("aoi.jpg")
+    gray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)
+    # Use pytesseract to detect text
+    text = pytesseract.image_to_string(gray)
+    print(text)
+    if text.strip():
+        return True
+    else:
+        return False
+
 
 while True:
-    sleep(5)
+    sleep(65)
+    # Check if the computer is being used
+    if is_being_used():
+        print("Computer is being used")
+        continue
+    else:
+        pass
     # Login
     click(CORD_PASSKEY)
     sleep(0.5)
@@ -32,13 +54,6 @@ while True:
     # Step 2: Define the coordinates of the ROI
     # (top-left x, top-left y, width, height)
     # Step 3: Crop the ROI from the image
-    addr_cords = []
-    for i in range(5):
-        x = 710
-        y = 425
-        l = 125
-        b = 15
-        addr_cords.append([y, y + l, x, x + b])
 
     roi = image[400:900, 605:628]
 
@@ -73,4 +88,3 @@ while True:
         print("Found")
         for i in range(3):
             playsound.playsound("bell.wav")
-    sleep(120)
