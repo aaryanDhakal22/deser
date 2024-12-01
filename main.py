@@ -8,7 +8,6 @@ import playsound
 import pytesseract
 from notifier import *
 
-
 def is_being_used():
 
     pyautogui.screenshot("images/check.jpg")

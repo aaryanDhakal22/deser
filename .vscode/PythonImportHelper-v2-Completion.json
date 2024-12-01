@@ -111,12 +111,20 @@
         "documentation": {}
     },
     {
-        "label": "http.client,",
+        "label": "os",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "http.client.",
-        "description": "http.client.",
-        "detail": "http.client.",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
         "documentation": {}
     },
     {
@@ -246,20 +254,20 @@
         "documentation": {}
     },
     {
-        "label": "aaryan",
-        "kind": 5,
-        "importPath": "notifier",
-        "description": "notifier",
-        "peekOfCode": "aaryan = \"uhrj3t2vg8gbfm4xssre6nf2auahmw\"\nAPP_TOKEN = \"aj8jvjyp667iaahqmczrtmoe4ex2fz\"\ndef send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": message},\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},\n    )\n    print(r.text)\n# r = requests.post(",
-        "detail": "notifier",
-        "documentation": {}
-    },
-    {
         "label": "APP_TOKEN",
         "kind": 5,
         "importPath": "notifier",
         "description": "notifier",
-        "peekOfCode": "APP_TOKEN = \"aj8jvjyp667iaahqmczrtmoe4ex2fz\"\ndef send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": message},\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},\n    )\n    print(r.text)\n# r = requests.post(\n#     \"https://api.pushover.net/1/messages.json\",",
+        "peekOfCode": "APP_TOKEN = os.getenv(\"APP_TOKEN\")\naaryan = os.getenv(\"aaryan\")\ndef send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": message},\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},\n    )\n    print(r.text)\n# r = requests.post(",
+        "detail": "notifier",
+        "documentation": {}
+    },
+    {
+        "label": "aaryan",
+        "kind": 5,
+        "importPath": "notifier",
+        "description": "notifier",
+        "peekOfCode": "aaryan = os.getenv(\"aaryan\")\ndef send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": message},\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},\n    )\n    print(r.text)\n# r = requests.post(\n#     \"https://api.pushover.net/1/messages.json\",",
         "detail": "notifier",
         "documentation": {}
     }

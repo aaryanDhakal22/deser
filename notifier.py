@@ -1,10 +1,17 @@
 import requests
-import http.client, urllib
 
+# importing os module for environment variables
+import os
 
-aaryan = "uhrj3t2vg8gbfm4xssre6nf2auahmw"
+# importing necessary functions from dotenv library
+from dotenv import load_dotenv
 
-APP_TOKEN = "aj8jvjyp667iaahqmczrtmoe4ex2fz"
+# loading variables from .env file
+load_dotenv()
+
+# accessing and printing value
+APP_TOKEN = os.getenv("APP_TOKEN")
+aaryan = os.getenv("aaryan")
 
 
 def send_notification(message, image_path):
