@@ -5,7 +5,7 @@ from time import sleep
 
 new_file = open(f"./cords/{datetime.now().strftime('%H_%M_%S')}.txt", "w")
 sleep(4)
-for i in range(4):
+for i in range(6):
 
     winsound.Beep(500, 1000)
     winsound.Beep(600, 1000)

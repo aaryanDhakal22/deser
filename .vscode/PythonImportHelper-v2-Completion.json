@@ -94,11 +94,37 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "notifier",
+        "description": "notifier",
+        "isExtraImport": true,
+        "detail": "notifier",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "http.client,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "http.client.",
+        "description": "http.client.",
+        "detail": "http.client.",
+        "documentation": {}
+    },
+    {
         "label": "CORD_PASSKEY",
         "kind": 5,
         "importPath": "CORDS",
         "description": "CORDS",
-        "peekOfCode": "CORD_PASSKEY = [840, 644]\nCORD_ENTER = [928, 756]\nCORD_DISPATCH = [979, 291]\nCORD_KEY = [487, 967]",
+        "peekOfCode": "CORD_PASSKEY = [840, 644]\nCORD_ENTER = [928, 756]\nCORD_DISPATCH = [979, 291]\nCORD_KEY = [487, 967]\nCORD_EDIT = [582, 945]\nCORD_EDIT_CUST = [870, 943]\nCORD_CONF_EDIT = [842, 724]\nCORD_TEXT_AREA = [712, 847]\nCORD_CLEAR = [1128, 594]\nCORD_PAY_SEQ = [",
         "detail": "CORDS",
         "documentation": {}
     },
@@ -107,7 +133,7 @@
         "kind": 5,
         "importPath": "CORDS",
         "description": "CORDS",
-        "peekOfCode": "CORD_ENTER = [928, 756]\nCORD_DISPATCH = [979, 291]\nCORD_KEY = [487, 967]",
+        "peekOfCode": "CORD_ENTER = [928, 756]\nCORD_DISPATCH = [979, 291]\nCORD_KEY = [487, 967]\nCORD_EDIT = [582, 945]\nCORD_EDIT_CUST = [870, 943]\nCORD_CONF_EDIT = [842, 724]\nCORD_TEXT_AREA = [712, 847]\nCORD_CLEAR = [1128, 594]\nCORD_PAY_SEQ = [\n    [1365, 853],",
         "detail": "CORDS",
         "documentation": {}
     },
@@ -116,7 +142,7 @@
         "kind": 5,
         "importPath": "CORDS",
         "description": "CORDS",
-        "peekOfCode": "CORD_DISPATCH = [979, 291]\nCORD_KEY = [487, 967]",
+        "peekOfCode": "CORD_DISPATCH = [979, 291]\nCORD_KEY = [487, 967]\nCORD_EDIT = [582, 945]\nCORD_EDIT_CUST = [870, 943]\nCORD_CONF_EDIT = [842, 724]\nCORD_TEXT_AREA = [712, 847]\nCORD_CLEAR = [1128, 594]\nCORD_PAY_SEQ = [\n    [1365, 853],\n    [678, 966],",
         "detail": "CORDS",
         "documentation": {}
     },
@@ -125,7 +151,61 @@
         "kind": 5,
         "importPath": "CORDS",
         "description": "CORDS",
-        "peekOfCode": "CORD_KEY = [487, 967]",
+        "peekOfCode": "CORD_KEY = [487, 967]\nCORD_EDIT = [582, 945]\nCORD_EDIT_CUST = [870, 943]\nCORD_CONF_EDIT = [842, 724]\nCORD_TEXT_AREA = [712, 847]\nCORD_CLEAR = [1128, 594]\nCORD_PAY_SEQ = [\n    [1365, 853],\n    [678, 966],\n    [1262, 948],",
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "CORD_EDIT",
+        "kind": 5,
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "peekOfCode": "CORD_EDIT = [582, 945]\nCORD_EDIT_CUST = [870, 943]\nCORD_CONF_EDIT = [842, 724]\nCORD_TEXT_AREA = [712, 847]\nCORD_CLEAR = [1128, 594]\nCORD_PAY_SEQ = [\n    [1365, 853],\n    [678, 966],\n    [1262, 948],\n    [906, 719],",
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "CORD_EDIT_CUST",
+        "kind": 5,
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "peekOfCode": "CORD_EDIT_CUST = [870, 943]\nCORD_CONF_EDIT = [842, 724]\nCORD_TEXT_AREA = [712, 847]\nCORD_CLEAR = [1128, 594]\nCORD_PAY_SEQ = [\n    [1365, 853],\n    [678, 966],\n    [1262, 948],\n    [906, 719],\n    [986, 372],",
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "CORD_CONF_EDIT",
+        "kind": 5,
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "peekOfCode": "CORD_CONF_EDIT = [842, 724]\nCORD_TEXT_AREA = [712, 847]\nCORD_CLEAR = [1128, 594]\nCORD_PAY_SEQ = [\n    [1365, 853],\n    [678, 966],\n    [1262, 948],\n    [906, 719],\n    [986, 372],\n    [1275, 717],",
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "CORD_TEXT_AREA",
+        "kind": 5,
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "peekOfCode": "CORD_TEXT_AREA = [712, 847]\nCORD_CLEAR = [1128, 594]\nCORD_PAY_SEQ = [\n    [1365, 853],\n    [678, 966],\n    [1262, 948],\n    [906, 719],\n    [986, 372],\n    [1275, 717],\n]",
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "CORD_CLEAR",
+        "kind": 5,
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "peekOfCode": "CORD_CLEAR = [1128, 594]\nCORD_PAY_SEQ = [\n    [1365, 853],\n    [678, 966],\n    [1262, 948],\n    [906, 719],\n    [986, 372],\n    [1275, 717],\n]",
+        "detail": "CORDS",
+        "documentation": {}
+    },
+    {
+        "label": "CORD_PAY_SEQ",
+        "kind": 5,
+        "importPath": "CORDS",
+        "description": "CORDS",
+        "peekOfCode": "CORD_PAY_SEQ = [\n    [1365, 853],\n    [678, 966],\n    [1262, 948],\n    [906, 719],\n    [986, 372],\n    [1275, 717],\n]",
         "detail": "CORDS",
         "documentation": {}
     },
@@ -134,7 +214,7 @@
         "kind": 5,
         "importPath": "detect",
         "description": "detect",
-        "peekOfCode": "new_file = open(f\"./cords/{datetime.now().strftime('%H_%M_%S')}.txt\", \"w\")\nsleep(4)\nfor i in range(4):\n    winsound.Beep(500, 1000)\n    winsound.Beep(600, 1000)\n    winsound.Beep(700, 1000)\n    new_file.write(str(pyautogui.position()))\n    new_file.write(\"\\n\")",
+        "peekOfCode": "new_file = open(f\"./cords/{datetime.now().strftime('%H_%M_%S')}.txt\", \"w\")\nsleep(4)\nfor i in range(6):\n    winsound.Beep(500, 1000)\n    winsound.Beep(600, 1000)\n    winsound.Beep(700, 1000)\n    new_file.write(str(pyautogui.position()))\n    new_file.write(\"\\n\")",
         "detail": "detect",
         "documentation": {}
     },
@@ -143,8 +223,44 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def is_being_used():\n    pyautogui.screenshot(\"check.jpg\")\n    check_img = cv2.imread(\"check.jpg\")\n    aoi = check_img[294:305, 548:595]\n    gray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\n    text = pytesseract.image_to_string(gray)\n    print(text)\n    if text.strip():\n        return True\n    else:",
+        "peekOfCode": "def is_being_used():\n    pyautogui.screenshot(\"images/check.jpg\")\n    check_img = cv2.imread(\"images/check.jpg\")\n    aoi = check_img[294:305, 548:595]\n    gray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\n    text = pytesseract.image_to_string(gray)\n    print(text)\n    if text.strip():\n        return True\n    else:",
         "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "is_empty",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def is_empty(image_path, threshold=240, tolerance=0.95):\n    # Load the image\n    image = cv2.imread(image_path)\n    # Check if the image is None\n    if image is None:\n        return False\n    # Convert to grayscale\n    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n    # Calculate the proportion of pixels above the threshold\n    white_pixel_ratio = np.mean(gray_image >= threshold)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "send_notification",
+        "kind": 2,
+        "importPath": "notifier",
+        "description": "notifier",
+        "peekOfCode": "def send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": message},\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},\n    )\n    print(r.text)\n# r = requests.post(\n#     \"https://api.pushover.net/1/messages.json\",\n#     data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": \"There is a card\"},",
+        "detail": "notifier",
+        "documentation": {}
+    },
+    {
+        "label": "aaryan",
+        "kind": 5,
+        "importPath": "notifier",
+        "description": "notifier",
+        "peekOfCode": "aaryan = \"uhrj3t2vg8gbfm4xssre6nf2auahmw\"\nAPP_TOKEN = \"aj8jvjyp667iaahqmczrtmoe4ex2fz\"\ndef send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": message},\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},\n    )\n    print(r.text)\n# r = requests.post(",
+        "detail": "notifier",
+        "documentation": {}
+    },
+    {
+        "label": "APP_TOKEN",
+        "kind": 5,
+        "importPath": "notifier",
+        "description": "notifier",
+        "peekOfCode": "APP_TOKEN = \"aj8jvjyp667iaahqmczrtmoe4ex2fz\"\ndef send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": message},\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},\n    )\n    print(r.text)\n# r = requests.post(\n#     \"https://api.pushover.net/1/messages.json\",",
+        "detail": "notifier",
         "documentation": {}
     }
 ]
