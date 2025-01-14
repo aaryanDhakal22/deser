@@ -1,6 +1,0 @@
-Point(x=1365, y=853)
-Point(x=678, y=966)
-Point(x=1262, y=948)
-Point(x=906, y=719)
-Point(x=986, y=372)
-Point(x=1275, y=717)

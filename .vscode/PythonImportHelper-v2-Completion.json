@@ -85,15 +85,6 @@
         "documentation": {}
     },
     {
-        "label": "pytesseract",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pytesseract",
-        "description": "pytesseract",
-        "detail": "pytesseract",
-        "documentation": {}
-    },
-    {
         "label": "*",
         "importPath": "notifier",
         "description": "notifier",
@@ -231,7 +222,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def is_being_used():\n    pyautogui.screenshot(\"images/check.jpg\")\n    check_img = cv2.imread(\"images/check.jpg\")\n    aoi = check_img[294:305, 548:595]\n    gray = cv2.cvtColor(aoi, cv2.COLOR_BGR2GRAY)\n    text = pytesseract.image_to_string(gray)\n    print(text)\n    if text.strip():\n        return True\n    else:",
+        "peekOfCode": "def is_being_used():\n    pyautogui.screenshot(\"images/check.jpg\")\n    check_img = cv2.imread(\"images/check.jpg\")\n    square = check_img[500:525, 962:985]\n    average_color = np.mean(square, axis=(0, 1))\n    print(\"Average color:\", average_color)\n    color_list = list(average_color)\n    print(color_list)\n    if color_list[0] > 200 and color_list[1] > 200 and color_list[2] > 200:\n        print(\"Computer is being used\")",
         "detail": "main",
         "documentation": {}
     },
@@ -240,7 +231,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def is_empty(image_path, threshold=240, tolerance=0.95):\n    # Load the image\n    image = cv2.imread(image_path)\n    # Check if the image is None\n    if image is None:\n        return False\n    # Convert to grayscale\n    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n    # Calculate the proportion of pixels above the threshold\n    white_pixel_ratio = np.mean(gray_image >= threshold)",
+        "peekOfCode": "def is_empty(image_path, threshold=240, tolerance=0.95):\n    image = cv2.imread(image_path)\n    if image is None:\n        print(\"Image not found\")\n        return False\n    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\n    white_pixel_ratio = np.mean(gray_image >= threshold)\n    print(white_pixel_ratio, tolerance)\n    return white_pixel_ratio >= tolerance\nwhile True:",
         "detail": "main",
         "documentation": {}
     },
@@ -249,7 +240,7 @@
         "kind": 2,
         "importPath": "notifier",
         "description": "notifier",
-        "peekOfCode": "def send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": message},\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},\n    )\n    print(r.text)\n# r = requests.post(\n#     \"https://api.pushover.net/1/messages.json\",\n#     data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": \"There is a card\"},",
+        "peekOfCode": "def send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\n            \"token\": APP_TOKEN,\n            \"user\": aaryan,\n            \"message\": message,\n            \"device\": \"aaryans24\",\n        },\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},",
         "detail": "notifier",
         "documentation": {}
     },
@@ -258,7 +249,7 @@
         "kind": 5,
         "importPath": "notifier",
         "description": "notifier",
-        "peekOfCode": "APP_TOKEN = os.getenv(\"APP_TOKEN\")\naaryan = os.getenv(\"aaryan\")\ndef send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": message},\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},\n    )\n    print(r.text)\n# r = requests.post(",
+        "peekOfCode": "APP_TOKEN = os.getenv(\"APP_TOKEN\")\naaryan = os.getenv(\"aaryan\")\ndef send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\n            \"token\": APP_TOKEN,\n            \"user\": aaryan,\n            \"message\": message,\n            \"device\": \"aaryans24\",",
         "detail": "notifier",
         "documentation": {}
     },
@@ -267,7 +258,7 @@
         "kind": 5,
         "importPath": "notifier",
         "description": "notifier",
-        "peekOfCode": "aaryan = os.getenv(\"aaryan\")\ndef send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\"token\": APP_TOKEN, \"user\": aaryan, \"message\": message},\n        files={\"attachment\": (\"card.jpg\", open(image_path, \"rb\"), \"image/jpeg\")},\n    )\n    print(r.text)\n# r = requests.post(\n#     \"https://api.pushover.net/1/messages.json\",",
+        "peekOfCode": "aaryan = os.getenv(\"aaryan\")\ndef send_notification(message, image_path):\n    r = requests.post(\n        \"https://api.pushover.net/1/messages.json\",\n        data={\n            \"token\": APP_TOKEN,\n            \"user\": aaryan,\n            \"message\": message,\n            \"device\": \"aaryans24\",\n        },",
         "detail": "notifier",
         "documentation": {}
     }

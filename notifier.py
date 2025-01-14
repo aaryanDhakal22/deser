@@ -17,31 +17,12 @@ aaryan = os.getenv("aaryan")
 def send_notification(message, image_path):
     r = requests.post(
         "https://api.pushover.net/1/messages.json",
-        data={"token": APP_TOKEN, "user": aaryan, "message": message},
+        data={
+            "token": APP_TOKEN,
+            "user": aaryan,
+            "message": message,
+            "device": "aaryans24",
+        },
         files={"attachment": ("card.jpg", open(image_path, "rb"), "image/jpeg")},
     )
     print(r.text)
-
-
-# r = requests.post(
-#     "https://api.pushover.net/1/messages.json",
-#     data={"token": APP_TOKEN, "user": aaryan, "message": "There is a card"},
-#     files={"attachment": ("card.jpg", open("card.jpg", "rb"), "image/jpeg")},
-# )
-# print(r.text)
-
-# def send_notification(message):
-#     conn = http.client.HTTPSConnection("api.pushover.net:443")
-#     conn.request(
-#         "POST",
-#         "/1/messages.json",
-#         urllib.parse.urlencode(
-#             {
-#                 "token": APP_TOKEN,
-#                 "user": aaryan,
-#                 "message": message,
-#             }
-#         ),
-#         {"Content-type": "application/x-www-form-urlencoded"},
-#     )
-#     conn.getresponse()
